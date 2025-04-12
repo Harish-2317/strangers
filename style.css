@@ -204,7 +204,7 @@
 
            
             .home-img {
-              width: 100vh;
+              width: 95vh;
               height: 45vh;
               padding: 0;
               margin: 0 auto;
@@ -285,30 +285,33 @@
 
           .title{
             margin-top: 0;
-            font-size: 2.5rem;
-            margin:0 ;
+            font-size: 2rem;
+            margin: 10px auto;
             padding: 0;
             /* top: 50%; */
           
           }
         
-        .title-2 {
+        /* .title-2 {
           font-size: 1.5rem;
           margin: 0;
           padding: 0;
-          line-height: 2; /* Adjust line-height if necessary */
-        
-      }
+          line-height: 2;
+        } */
+           
+      
+      
       /* TOP WHITE ROTATRY IMAG */
+      
       .ro-img{
-        width: 40%;
+        width: 35%;
         height: 10%;
         padding: 0;
         margin: 0 auto;
         align-items: center;
         margin-top: 0;
         margin-bottom: 0;
-        border-radius: 10px;
+        border-radius: 15px;
       }
 
       /* .about-title{
