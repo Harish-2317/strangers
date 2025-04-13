@@ -727,6 +727,8 @@ figure{
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transitions */
   }
 
+}
+
             /* Media query for tablets */
 @media screen and (max-width: 768px) {
     .slider {
@@ -751,7 +753,5 @@ figure{
     }
 }
 
-  
-}
 
 
