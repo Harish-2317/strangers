@@ -729,29 +729,6 @@ figure{
 
 }
 
-            /* Media query for tablets */
-@media screen and (max-width: 768px) {
-    .slider {
-        height: 300px; /* Adjust height for smaller screens */
-    }
-
-    .slider .slide img {
-        width: 100%;
-        height: auto; /* Maintain aspect ratio */
-    }
-}
-
-/* Media query for mobile devices */
-@media screen and (max-width: 480px) {
-    .slider {
-        height: 200px; /* Further reduce height for smaller screens */
-    }
-
-    .slider .slide img {
-        width: 100%;
-        height: auto; /* Maintain aspect ratio */
-    }
-}
 
 
 
