@@ -178,6 +178,18 @@
               background-color: violet;
             }
             
+
+            /* ========== BODY BACKGROUND========== */
+            .video-background {
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              z-index: -1;
+          }
+
             /*=== Show menu ===*/
             .show {
               right: 0;
@@ -357,7 +369,7 @@
       box-shadow: 0 0 35px #5300a0, 0 0 70px #ae41cc; /* Intensify glow on hover */
   }
        
-      /* lacha about sec*/
+      /* =============== lacha about sec=============*/
       .about{
         padding-top: 60px;
       }
@@ -496,16 +508,15 @@
 
   /* PREVIOUS PROJECTS */
 
-  .prv-projects{
+  .prv-projects {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    /* Add spacing between project items */
     padding-top: 60px;
-  }
+}
 
-  .prv-content{
-    padding-left: 20px;
-    padding-bottom: 50px;
-  }
-
-  /* .pro-title{
+/* .pro-title{
     font-size: 2rem;
     margin-bottom: 30px;
     padding-left: 70px;
@@ -522,77 +533,126 @@
     padding-left: 30px;
   } */
 
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    /* Add spacing between project items */
+}
+
+.project-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    /* Add spacing between image and text */
+    flex-wrap: wrap;
+    /* Ensure responsiveness for smaller screens */
+}
+
+.project-text {
+  flex: 2;
+  /* Allow the text to take up more space */
+  text-align: left;
+  /* Align text to the left */
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #fff;
+  margin-top: -90px;
+}
+
+.project-image {
+    flex: 1;
+    /* Allow the image to take up available space */
+    text-align: center;
+}
+
+.project-image img {
+    width: 100%;
+    /* Make the image responsive */
+    max-width: 400px;
+    /* Set a maximum width for the image */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 10px;
+    /* Optional: Add rounded corners */
+}
+
+
+
+  
   /* PREVIOUS PROJECT SLIDER IMGS */
-  .slider{
+  .slider {
     width: 100%;
     height: 500px;
     overflow: hidden;
-    
+
 }
 
-figure{
+figure {
     position: relative;
     left: 0;
-    width: 400%; /* width dikali slide */
+    width: 400%;
+    /* width dikali slide */
     animation: 10s slide infinite;
 }
 
-.slide{
+.slide {
     position: relative;
-    width: 25%; /* width dibagi slide */
+    width: 25%;
+    /* width dibagi slide */
     float: left;
+    
 }
 
-
-
-
-.slide img{
+.slide img {
     width: 350px;
     height: 350px;
 }
 
-@keyframes slide{
-    0%{
-        left:0;
+@keyframes slide {
+    0% {
+        left: 0;
     }
-    10%{
-        left:0;
+    10% {
+        left: 0;
     }
-    20%{
-        left:-100%;
+    20% {
+        left: -100%;
     }
-    30%{
-        left:-100%;
+    30% {
+        left: -100%;
     }
-    40%{
-        left:-200%;
+    40% {
+        left: -200%;
     }
-    50%{
-        left:-200%;
+    50% {
+        left: -200%;
     }
-    55%{
-        left:-300%;
+    55% {
+        left: -300%;
     }
-    65%{
-        left:-300%;
+    65% {
+        left: -300%;
     }
-    66%{
-        left:-200%;
+    66% {
+        left: -200%;
     }
-    74%{
-        left:-200%;
+    74% {
+        left: -200%;
     }
-    75%{
-        left:-100%;
+    75% {
+        left: -100%;
     }
-    85%{
-        left:-100%;
+    85% {
+        left: -100%;
     }
-    90%{
-        left:0;
+    90% {
+        left: 0;
     }
-    1000%{
-        left:0;
+    1000% {
+        left: 0;
     }
 }
 
@@ -601,9 +661,156 @@ figure{
 .Events{
   padding-top: 60px;
   padding-bottom: 60px;
+} 
+
+.cont2 {
+  display: flex;
+  justify-content: center;
+  /* Center the cards horizontally */
+  align-items: center;
+  /* Center the cards vertically */
+  flex-wrap: wrap;
+  /* Allow wrapping if there are too many cards */
+  gap: 2rem;
+  /* Add spacing between cards */
+  margin: 0 auto;
+  /* Center the container itself */
+  padding: 2rem;
+  /* Add padding around the container */
 }
 
-.evt-title{
+.card__container {
+  display: flex;
+  justify-content: center;
+  /* Center the cards inside the container */
+  align-items: center;
+  /* Align cards vertically */
+  flex-wrap: wrap;
+  /* Allow cards to wrap to the next line */
+  gap: 2rem;
+  /* Add spacing between cards */
+}
+
+.card__article {
+  position: relative;
+  overflow: hidden;
+}
+
+.card__article img:hover>.card__article img:not(:hover) {
+  filter: blur(50%);
+}
+
+.card__img {
+  width: 22rem;
+  border-radius: 1.5rem;
+}
+
+.card__data {
+  width: 280px;
+  background-color: hsl(0, 0%, 100%);
+  padding: 1.5rem 2rem;
+  box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+  border-radius: 1rem;
+  position: absolute;
+  bottom: -9rem;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  opacity: 0;
+  transition: opacity 1s 1s;
+}
+
+.card__description {
+  display: block;
+  font-size: .813rem;
+  ;
+  margin-bottom: .25rem;
+}
+
+.card__title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: hsl(0, 0%, 15%);
+  margin-bottom: .75rem;
+}
+
+.card__button {
+  text-decoration: none;
+  font-size: .813rem;
+  font-weight: 500;
+  color: violet;
+}
+
+.card__button:hover {
+  text-decoration: underline;
+}
+
+.container2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Naming animations in hover */
+
+.card__article:hover .card__data {
+  animation: show-data 1s forwards;
+  opacity: 2;
+  transition: opacity .3s;
+}
+
+.card__article:hover {
+  animation: remove-overflow 2s forwards;
+}
+
+.card__article:not(:hover) {
+  animation: show-overflow 2s forwards;
+}
+
+.card__article:not(:hover) .card__data {
+  animation: remove-data 1s forwards;
+}
+
+/* Card animation */
+
+@keyframes show-data {
+  50% {
+      transform: translateY(-10rem);
+  }
+  100% {
+      transform: translateY(-7rem);
+  }
+}
+
+@keyframes remove-overflow {
+  to {
+      overflow: initial;
+  }
+}
+
+@keyframes remove-data {
+  0% {
+      transform: translateY(-7rem);
+  }
+  50% {
+      transform: translateY(-10rem);
+  }
+  100% {
+      transform: translateY(.5rem);
+  }
+}
+
+@keyframes show-overflow {
+  0% {
+      overflow: initial;
+      pointer-events: none;
+  }
+  50% {
+      overflow: hidden;
+  }
+}
+
+/* .evt-title{
   font-size: 1.7rem;
   margin-bottom: 30px;
   margin-top: 30px;
@@ -675,7 +882,10 @@ figure{
 
 .learn-more:hover {
   background-color: #0056b3;
-}
+} */
+
+
+
 
 /* ===============FOOTER================= */
 
@@ -909,5 +1119,6 @@ footer .card {
     flex: 1 1 100%;
   }
 }
+
 
 
