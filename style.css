@@ -356,7 +356,7 @@
       background-color: #7a2e90;
       border-radius: 40px;
       font-size: 16px;
-      letter-spacing: 1px;
+      letter-spacing: 1px; 
       text-decoration: none;
       font-weight: 600;
       color: #f1f1f1; /* Text color */
@@ -618,6 +618,12 @@ figure{
   padding-bottom: 60px;
 } 
 
+.evt-title{
+  margin-bottom: 30px;
+  margin-top: 70px ;
+  text-align: center;
+}
+
 .cont2 {
   display: flex;
   justify-content: center;
@@ -636,14 +642,31 @@ figure{
 
 .card__container {
   display: flex;
-  justify-content: center;
-  /* Center the cards inside the container */
-  align-items: center;
-  /* Align cards vertically */
-  flex-wrap: wrap;
-  /* Allow cards to wrap to the next line */
+  flex-wrap: nowrap; /* Prevent wrapping for horizontal scrolling */
+  overflow-x: auto;   /* Enable horizontal scroll */
   gap: 2rem;
-  /* Add spacing between cards */
+  padding-bottom: 3rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+.card__container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.card__container::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 10px;
+}
+
+.card__container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+.card__article {
+  flex: 0 0 auto; /* Prevent cards from shrinking */
+  scroll-snap-align: start;
 }
 
 .card__article {
@@ -780,11 +803,111 @@ font-weight: 500;
   }
 }
 
+/* ============SUB-EVENTS ============= */
+
+.card-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  width: 320px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+  position: relative;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  color: #333;
+  margin: 0 0 8px;
+}
+
+.card-description {
+  font-size: 1rem;
+  color: #555;
+}
+
+.more-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+}
+
+.card.open .more-content {
+  max-height: 1000px;
+  opacity: 1;
+  margin-top: 10px;
+}
+
+.more-content p {
+  font-size: 0.95rem;
+  color: #444;
+  margin: 0;
+}
+
+
+
+.learn-more {
+  margin-top: 15px;
+  background-color: #4e73df;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.3s;
+  margin-bottom: 20px;
+  margin-left: 15px;
+}
+
+.learn-more:hover {
+  background-color: #2e59d9;
+}
+
+@media (min-width: 768px) {
+  .card-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    width: 300px;
+  }
+}
 
 
 
 
-/* ===============FOOTER================= */
+
+
+
+
+
+ /* ===============FOOTER=================  */
 
 footer {
   display: flex;
