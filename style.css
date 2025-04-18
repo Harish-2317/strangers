@@ -969,11 +969,11 @@ footer .card {
 }
 .name {
   font-weight: bold;
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 .posting{
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 
